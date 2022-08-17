@@ -45,7 +45,6 @@ function Neovide_fullscreen()
 endfunction
 map <F11> :call Neovide_fullscreen()<cr>
 
-autocmd VimEnter * NERDTree
 nnoremap <F4> :NERDTreeToggle<CR>
 
 call plug#begin('C:/Users/rhino/AppData/Local/nvim/autoload/plugged')
