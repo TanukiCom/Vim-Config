@@ -1,8 +1,8 @@
 syntax on
 
 " turn hybrid line numbers on
-:set number relativenumber
-:set nu rnu
+set number relativenumber
+set nu rnu
 
 set mouse=a
 
@@ -24,7 +24,6 @@ set nohlsearch
 set hidden
 set noerrorbells
 set ignorecase
-
 
 set termguicolors
 set scrolloff=8
@@ -80,12 +79,15 @@ Plug 'preservim/nerdtree'
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
 
+" another colorscheme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 call plug#end()
 
 syntax enable
 filetype plugin indent on
 
-colorscheme gruvbox
+colorscheme gruvbox 
 set bg=dark " or light if you want light mode
 
 " Set completeopt to have a better completion experience
@@ -136,6 +138,14 @@ local opts = {
 
 require('rust-tools').setup(opts)
 EOF
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 " Setup Completion
 " See https://github.com/hrsh7th/nvim-cmp#basic-configuration
