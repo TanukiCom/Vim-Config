@@ -1,12 +1,14 @@
-set number
-" source ~/AppData/Local/nvim/vim-plug/plugins.vim
-
 syntax on
+
+" turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
+
+set mouse=a
 
 set tabstop=4
 set smartindent
 
-set number
 set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
