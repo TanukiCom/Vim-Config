@@ -1,8 +1,8 @@
 syntax on
 
 " turn hybrid line numbers on
-set number relativenumber
-set nu rnu
+set number 
+set nu 
 
 set mouse=a
 
@@ -81,6 +81,8 @@ Plug 'ellisonleao/gruvbox.nvim'
 " another colorscheme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
+Plug 'jiangmiao/auto-pairs', { 'branch': 'main' }
+
 call plug#end()
 
 syntax enable
@@ -138,13 +140,13 @@ local opts = {
 require('rust-tools').setup(opts)
 EOF
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O
 
 " Setup Completion
 " See https://github.com/hrsh7th/nvim-cmp#basic-configuration
